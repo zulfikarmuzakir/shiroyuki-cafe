@@ -61,17 +61,20 @@ var menuCafe = [
 }
 ];
 
-var daftarMenu = document.querySelector("#menuYuki");
+window.onload = function() {
 
-for(let menu of menuCafe) {
-	daftarMenu.innerHTML += `<div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
-								<a href="#">
-                    				<img class="hover:grow hover:shadow-lg" src="${menu.img}">
-                    				<div class="pt-3 flex items-center justify-between">
-                        				<p class="">${menu.namaMenu}</p>
-                    				</div>
-                    				<p class="pt-1 text-gray-900">${menu.harga}</p>
-                				</a>
-                			</div>
-                			<br>`;
-}
+	var daftarMenu = document.querySelector(".menunya");
+
+	for(let menu of menuCafe) {
+		daftarMenu.innerHTML += `<div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
+									<a href="#">
+	                    				<img class="hover:grow hover:shadow-lg" src="${menu.img}">
+	                    				<div class="pt-3 flex items-center justify-between">
+	                        				<p class="">${menu.namaMenu}</p>
+	                    				</div>
+	                    				<p class="pt-1 text-gray-900">${menu.harga}</p>
+	                				</a>
+	                			</div>`;
+	}
+
+}	
