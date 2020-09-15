@@ -61,7 +61,7 @@ var menuCafe = [
 }
 ];
 
-function menuMap(menu, index) {
+menuCafe.map((menu, index)=> {
 	const daftarMenu = document.querySelector(".menunya");
 
 	daftarMenu.innerHTML += `<div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
@@ -73,6 +73,4 @@ function menuMap(menu, index) {
 									<p class="pt-1 text-gray-900">${menu.harga}</p>
 								</a>
 							</div>`;
-}
-
-menuCafe.map(menuMap);
+});
