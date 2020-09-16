@@ -104,7 +104,7 @@ searchData.addEventListener('keyup', () => {
 });
 
 
-// filter food
+// filter for food
 const tipeMakanan = document.querySelector(".food-menu");
 tipeMakanan.addEventListener('click', () => {
 	const food = menuCafe.filter((menu) => {
@@ -117,4 +117,19 @@ tipeMakanan.addEventListener('click', () => {
 
 	document.querySelector(".menunya").innerHTML = '';
 	food.map(daftarMenu);
+});
+
+//filter for drink
+const tipeMinuman = document.querySelector(".drink-menu");
+tipeMinuman.addEventListener('click', () => {
+	const drink = menuCafe.filter((menu) => {
+		const filterMinum = Array.from(document.querySelectorAll(".type-menu"));
+		const tipeMenu = menu.typeMenu;
+		const typeDrink = "Drink";
+
+		return tipeMenu.includes(typeDrink);
+	})
+
+	document.querySelector(".menunya").innerHTML = '';
+	drink.map(daftarMenu);
 });
