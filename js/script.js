@@ -102,3 +102,19 @@ searchData.addEventListener('keyup', () => {
 	document.querySelector(".menunya").innerHTML = ``;
 	search.map(daftarMenu);
 });
+
+
+// filter food
+const tipeMakanan = document.querySelector(".food-menu");
+tipeMakanan.addEventListener('click', () => {
+	const food = menuCafe.filter((menu) => {
+		const filterFood = Array.from(document.querySelectorAll(".type-menu"));
+		const tipeMenu = menu.typeMenu;
+		const typeFood = "Food";
+
+		return tipeMenu.includes(typeFood);
+	})
+
+	document.querySelector(".menunya").innerHTML = '';
+	food.map(daftarMenu);
+});
