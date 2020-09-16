@@ -103,6 +103,8 @@ searchData.addEventListener('keyup', () => {
 	search.map(daftarMenu);
 });
 
+
+//all menu
 const allMenu = document.querySelector(".all-menu");
 allMenu.addEventListener('click', () => {
 	document.querySelector(".menunya").innerHTML = ``;
