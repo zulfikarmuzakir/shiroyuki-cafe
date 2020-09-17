@@ -5,6 +5,12 @@ var menuCafe = [{
 		typeMenu: "Food"
 	},
 	{
+		img: "img/greentea.jpg",
+		namaMenu: "Green Tea",
+		harga: "Rp 12.000",
+		typeMenu: "Drink"
+	},
+	{
 		img: "img/sushi.jpg",
 		namaMenu: "Sushi",
 		harga: "Rp 28.000",
@@ -15,12 +21,6 @@ var menuCafe = [{
 		namaMenu: "Onigiri",
 		harga: "Rp 10.000",
 		typeMenu: "Food"
-	},
-	{
-		img: "img/greentea.jpg",
-		namaMenu: "Green Tea",
-		harga: "Rp 12.000",
-		typeMenu: "Drink"
 	},
 	{
 		img: "img/ramen.jpg",
@@ -72,6 +72,8 @@ var menuCafe = [{
 	}
 ];
 
+
+//Data
 var daftarMenu = (menu) => {
 	const daftarMenu = document.querySelector(".menunya");
 
@@ -116,7 +118,6 @@ allMenu.addEventListener('click', () => {
 const tipeMakanan = document.querySelector(".food-menu");
 tipeMakanan.addEventListener('click', () => {
 	const food = menuCafe.filter((menu) => {
-		const filterFood = Array.from(document.querySelectorAll(".type-menu"));
 		const tipeMenu = menu.typeMenu;
 		const typeFood = "Food";
 
@@ -131,7 +132,6 @@ tipeMakanan.addEventListener('click', () => {
 const tipeMinuman = document.querySelector(".drink-menu");
 tipeMinuman.addEventListener('click', () => {
 	const drink = menuCafe.filter((menu) => {
-		const filterMinum = Array.from(document.querySelectorAll(".type-menu"));
 		const tipeMenu = menu.typeMenu;
 		const typeDrink = "Drink";
 
