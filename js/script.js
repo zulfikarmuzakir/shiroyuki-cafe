@@ -86,6 +86,9 @@ var daftarMenu = (menu) => {
 									</div>
 									<p class="pt-1 text-gray-900">${menu.harga}</p>
 								</a>
+								<button class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 mt-2 rounded beli-makanan">
+  								Add to Cart
+								</button>
 							</div>`;
 }
 menuCafe.map(daftarMenu);
